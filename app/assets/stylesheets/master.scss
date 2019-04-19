@@ -12,6 +12,8 @@
   margin-bottom: 15px;
   padding: 20px;
 
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 }
 
@@ -27,6 +29,8 @@ body {
 .navbar {
     background: image_url('rubber_grip.png');
     box-shadow: 0px 1px 3px #2a2a2a;
+      color: #F2CC17;
+
 }
 
 .navbar-inverse .navbar-brand {
