@@ -40,3 +40,10 @@ body {
   
 }
 
+.pagination {
+  .previous_page { background:white; color:black }
+  .previous_page.disabled { background: gray; color: black }
+  .current { background: yellow }
+  .next_page { background: white; color: black }
+  .next_page.disabled { background: white; color: #777 }
+}
