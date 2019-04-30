@@ -58,7 +58,7 @@ before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destro
   private
 
   def place_params
-    params.require(:place).permit(:name, :description, :address)
+    params.require(:place).permit(:name, :description, :address, :latitude, :longtitude)
   end
 
 
