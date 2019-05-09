@@ -43,8 +43,8 @@
   Upload Photo
 </button>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!-- Photo Modal -->
+<div class="modal fade" id="myModal_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -54,12 +54,10 @@
         <h4 class="modal-title" id="myModalLabel">Choose a Photo</h4>
       </div>
       <div class="modal-body">
-<div class="clear"></div>
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
 <%= f.input :picture %>
   <%= f.input :caption %>
   </div>
-
 
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -71,18 +69,13 @@
 </div>
 
 
-
-
-
 <h1>PHOTOS</h1>
-
 <% @place.photos.each do |photo| %>
   <div>
       <% if photo.picture.url.present? %>
       <%= image_tag photo.picture.url, size: "200x100"%>
+      <%= photo.caption %>
       <% end %>
-        <%= photo.caption %>
-      <small><%= photo %></small>
   </div>
 <% end %>
 
@@ -95,11 +88,7 @@
 
 
 
-
-
-
-
-<!-- Modal -->
+<!-- Comment Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -123,7 +112,6 @@
   </div>
 </div>
 
-
 <div class="col-10 offset-1">
 <h1 class="float-left">Comments</h1>
 <!-- Button trigger modal -->
@@ -146,7 +134,6 @@
 </div>
 <% end %>
 </div>
-
 
 
 <div class="float-right">
