@@ -9,6 +9,14 @@
 <% end %>
 
 
+<% if place.photos.present? %>
+  <div>
+      <% if place.photos.last.picture.url.present? %>
+      <%= image_tag place.photos.last.picture.url, size: "430x300"%>
+      <% end %>
+  </div>
+<% end %>
+
 
 
 <% if place.comments.present? %>
@@ -28,6 +36,9 @@
 </div>
 <% end %>
 
+
+
+      
 <div class="box col-10 offset-5">
 <%= will_paginate @places %>
 </div>
