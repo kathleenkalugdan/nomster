@@ -19,7 +19,6 @@
 <br /><br />
 <div class="row">
 <% @user.comments.each do |comment| %>
-<%= comment.inspect %>
  <div class="col-12 col-sm-6">
   <h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
     <blockquote>
